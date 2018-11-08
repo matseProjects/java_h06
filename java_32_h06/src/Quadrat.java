@@ -1,6 +1,6 @@
 /**
  * 
- * @author lukas
+ * @author markus, lukas
  * Repraesentiert die Rechenoperation: Quadrieren
  *
  */

@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 /**
  * 
- * @author lukas
+ * @author markus, lukas
  * Repraesentiert eine Liste von Rechenoperationen
  */
 public class Rechenoperationsliste {
