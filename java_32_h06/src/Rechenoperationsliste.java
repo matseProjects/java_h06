@@ -29,18 +29,20 @@ public class Rechenoperationsliste {
 	
 	/**
 	 * Fuehrt die Rechenoperationen schrittweise fuer jedes Element des Feldes aus
-	 * und entfernt am Ende die Elemente der Rechenoperationsliste
+	 * 
 	 * @param field ,Feld, auf das die Rechenoperationen angewendet werden sollen
 	 * @return field , Feld, nach der Ausfuehrung der Rechenoperationen
 	 */
 	public double[] transform(double[] field) {
+		double[] fieldCopy = new double[field.length];
+		System.arraycopy(field, 0, fieldCopy, 0, field.length);
 		for(int counter=0; counter<field.length;counter++) {
 			for (Rechenoperation operation : operationList) {
-				field[counter]=operation.berechne(field[counter]);
+				fieldCopy[counter]=operation.berechne(fieldCopy[counter]);
 			}
 		}
-		operationList.clear();
-		return field;
+		//operationList.clear();
+		return fieldCopy;
 	}
 	
 	public static void main(String[] args){
